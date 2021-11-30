@@ -12,4 +12,4 @@ while f:
             l[i+1] = c
             f = True
     count += 1
-print(l)
+print("Отсортированный массив:", l)
