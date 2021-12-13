@@ -12,10 +12,12 @@ command = input("Выберите, что хотите сделать со сл�
 while command != "nothing" :
     if command == "add":
         color_name = input("Введите название цвета: ")
-        if colors.get(color_name) != None and input("Этот цвет найден в словаре, заменить код его цвета на новый? (да/нет): ") == 'да' or colors.get(color_name) == None :
-            color_rgb = tuple(input("Введите значения цвета в соответствии с моделью rgb через пробел: ").split(" "))
-            if len(color_rgb) == 3 and int(color_rgb[0]) <= 255 and int(color_rgb[1]) <= 255 and int(color_rgb[2]) <= 255 and int(color_rgb[0]) >= 0 and int(color_rgb[1]) >= 0 and int(color_rgb[2]) >= 0:
-                colors.update({color_name: color_rgb})
+        if colors.get(color_name) != None and input("Этот цвет найден в словаре, заменить код его цвета на новый? (да/нет): ") \
+            == 'да' or colors.get(color_name) == None :
+                color_rgb = tuple(input("Введите значения цвета в соответствии с моделью rgb через пробел: ").split(" "))
+            if len(color_rgb) == 3 and int(color_rgb[0]) <= 255 and int(color_rgb[1]) <= 255 \
+                and int(color_rgb[2]) <= 255 and int(color_rgb[0]) >= 0 and int(color_rgb[1]) >= 0 and int(color_rgb[2]) >= 0:
+                    colors.update({color_name: color_rgb})
     elif command == "delete":
         color_name = input("Введите название цвета: ")
         if colors.get(color_name) != None :
