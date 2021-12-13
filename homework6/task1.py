@@ -1,10 +1,21 @@
 def list_encode(list_str):
+    """
+    Функция получает список строк.
+    Функция преобразует его в список байт кодов.
+    Функция возвращает список байт кодов.
+    """
     list_byte = []
     for i in range(len(list_str)):
         list_byte.append(list_str[i].encode())
     return list_byte
 
 def list_decode(list_byte):
+    """
+    Обратная функция к предыдущей.
+    Функция получает список байт кодов.
+    Функция преобразует его в список строк.
+    Функция возвращает список строк.
+    """
     list_str = []
     for i in range(len(list_byte)):
         list_str.append(list_byte[i].decode())
