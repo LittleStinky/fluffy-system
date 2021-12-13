@@ -1,4 +1,8 @@
 def sum(*args):
+    """
+    Функция принимает сколько угодно аргументов.
+    Функция возвращает их сумму.
+    """
     print(args)
     if len(args) == 0:
         rez = 0
@@ -7,6 +11,7 @@ def sum(*args):
         for i in range(1, len(args)):
             rez += args[i]
     return rez
+
 
 try:
     print("Сумма равна", sum())
