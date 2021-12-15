@@ -98,18 +98,6 @@ class Human(Mammals):
         else:
             print("{self.name} гладит {dog.name}")
 
-class Student(Human):
-    def __init__(self, name, age, food, sleep_hours, gender, character, course, count_homework):
-        super().__init__(name, age, food, sleep_hours, gender, character, is_happy = False)
-        self.course = course
-        self.count_homework = count_homework
-
-    def info(self):
-        print(f'Я {self.character} студент {self.course} курса. Меня зовут {self.name}. Мне {self.age} лет')
-        print(f'Моя еда: {self.food}.')
-        print(f'Я сплю по {self.sleep_hours} часов в день.')
-        print(f'I am dead inside but still horny')
-
 Pasha1 = Cat('Pasha', 20, 6, 9, False)
 Olya1 = Human('Olya', 10, 'тортики', 12, 'ж', 'сильная и независимая', False)
 Pasha1.info()
